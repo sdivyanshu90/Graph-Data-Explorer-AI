@@ -1,1 +1,1 @@
-# Graph-Data-Explorer-AI
+# BizFlow Graph AI
