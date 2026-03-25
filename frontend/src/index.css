@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  height: 100vh;
+  width: 100vw;
+}
+
+/* React Flow overrides */
+.react-flow__node {
+  border-radius: 12px !important;
+  font-size: 11px !important;
+}
+
+.react-flow__edge-path {
+  stroke-width: 1.5 !important;
+}
+
+.react-flow__controls button {
+  background: #1e293b !important;
+  border-color: #334155 !important;
+  color: #94a3b8 !important;
+  fill: #94a3b8 !important;
+}
+
+.react-flow__controls button:hover {
+  background: #334155 !important;
+  color: #e2e8f0 !important;
+  fill: #e2e8f0 !important;
+}
+
+/* Pulse animation for highlighted nodes */
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow:
+      0 0 8px rgba(251, 191, 36, 0.4),
+      0 0 24px rgba(251, 191, 36, 0.2);
+  }
+  50% {
+    box-shadow:
+      0 0 16px rgba(251, 191, 36, 0.6),
+      0 0 40px rgba(251, 191, 36, 0.3),
+      0 0 60px rgba(251, 191, 36, 0.1);
+  }
+}
+
+.node-highlighted {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Smooth node transition */
+.graph-node {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Chat message styling */
+.chat-message pre {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 10px 14px;
+  overflow-x: auto;
+  font-size: 12px;
+}
+
+.chat-message code {
+  background: #1e293b;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #7dd3fc;
+}
+
+.chat-message p {
+  margin-bottom: 0.5em;
+  line-height: 1.6;
+}
+
+.chat-message ul,
+.chat-message ol {
+  padding-left: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+.chat-message li {
+  margin-bottom: 0.25em;
+}
+
+.chat-message strong {
+  color: #f1f5f9;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
