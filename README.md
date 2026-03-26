@@ -19,7 +19,6 @@
 - [Getting Started](#getting-started)
 - [API Reference](#api-reference)
 - [Guardrails & Safety](#guardrails--safety)
-- [License](#license)
 
 ---
 
