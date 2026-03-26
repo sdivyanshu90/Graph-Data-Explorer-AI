@@ -19,10 +19,19 @@ from engine import GraphQueryEngine
 
 app = FastAPI(title="Graph Data Explorer API", version="1.0.0")
 
-# CORS for frontend dev server
+# CORS for frontend (dev + production)
+allowed_origins = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+]
+# Add production Vercel URL from environment
+prod_url = os.getenv("FRONTEND_URL")
+if prod_url:
+    allowed_origins.append(prod_url)
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+    allow_origins=allowed_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

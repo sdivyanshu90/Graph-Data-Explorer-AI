@@ -12,7 +12,7 @@ frontend/dist/
 # Data (large files)
 data/sap-o2c-data/
 data/cleaned/
-data/graph.pkl
+# data/graph.pkl — kept in repo (152KB, needed for deployment)
 data/*.zip
 
 # Environment
